@@ -2,12 +2,12 @@
 :root {
   --accent:#00ff88d2; 
   --accent2:#3ac9ed;
-  --bg:#0a0a0f; 
+  --bg:#cfcfcf; 
   --border:#1e1e2e; 
-  --card:#14141f; 
+  --card:#48a7a2; 
   --danger:#ff4466;
-  --muted:#6b6b88; 
-  --text:#e8e8f0; 
+  --muted:#3d3d4d; 
+  --text:#000000; 
 }
 *{
   box-sizing:border-box;
@@ -132,7 +132,7 @@ header{
   background:rgba(249,115,22,.08);
   border:1px solid rgba(249,115,22,.25);
   border-radius:4px;
-  color:#73ad30;
+  color:#47691f;
   cursor:pointer;
   font-family:'DM Mono',monospace;
   font-size:.72rem;
