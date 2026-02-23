@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PredictaBooks — Modelo Predictivo de Ventas</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="hrow">
+      <div class="logo">Market<em>Sense AI</em></div>
+      <div>
+        <div class="keybox">
+          <span>🔑 GROQ KEY:</span>
+          <input type="password" id="apikey" placeholder="default"
+            value="default"/>
+          <a href="https://console.groq.com/keys" target="_blank">↗ Obtener gratis</a>
+        </div>
+        <div class="model-row">
+          <span>Modelo:</span>
+          <select id="groq-model">
+            <option value="llama-3.3-70b-versatile">Llama 3.3 70B — Más preciso</option>
+            <option value="llama3-8b-8192">Llama 3 8B — Más rápido</option>
+            <option value="mixtral-8x7b-32768">Mixtral 8x7B — Contexto largo</option>
+            <option value="gemma2-9b-it">Gemma 2 9B — Eficiente</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-banner" id="demo-banner">
+    <strong>⚡ Modo Demo activado:</strong> Predicción calculada con modelo estadístico local.
+    Para análisis con IA real, obtén una API Key <strong>gratuita</strong> en
+    <a href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a>.
+  </div>
+
+  <div class="banner">
+    <h1>Modelo Predictivo<br>de Ventas de E-Books</h1>
+    <p>Ingresa los detalles de tu producto digital y obtén proyecciones de ventas impulsadas por Groq AI. La plataforma de inferencia más ágil del mercado.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- PRODUCTO -->
+    <div class="card">
+      <div class="ctitle">📚 Datos del Producto</div>
+      <label>Título del E-Book</label>
+      <input type="text" id="title" placeholder="Ej: Guía de Marketing Digital 2025"/>
+      <label>Categoría / Nicho</label>
+      <select id="category">
+        <option>Marketing Digital</option>
+        <option>Finanzas Personales</option>
+        <option>Desarrollo Personal</option>
+        <option>Programación / Tech</option>
+        <option>Salud y Bienestar</option>
+        <option>Negocios / Emprendimiento</option>
+        <option>Idiomas</option>
+        <option>Cocina / Gastronomía</option>
+        <option>Diseño / Creatividad</option>
+        <option>Otro</option>
+      </select>
+      <div class="row2">
+        <div>
+          <label>Precio (USD)</label>
+          <input type="number" id="price" value="9.99" min="0.5" step="0.01"/>
+        </div>
+        <div>
+          <label>Páginas</label>
+          <input type="number" id="pages" value="80" min="10"/>
+        </div>
+      </div>
+      <div class="row2">
+        <div>
+          <label>Audiencia objetivo</label>
+          <select id="audience">
+            <option>Principiantes</option><option>Intermedios</option>
+            <option>Avanzados</option><option>Todos los niveles</option>
+          </select>
+        </div>
+        <div>
+          <label>Plataforma de venta</label>
+          <select id="platform">
+            <option>Amazon KDP</option><option>Gumroad</option><option>Hotmart</option>
+            <option>Udemy / Teachable</option><option>Sitio propio</option><option>Múltiples</option>
+          </select>
+        </div>
+      </div>
+      <label>Presupuesto de marketing mensual (USD)</label>
+      <input type="number" id="marketing" value="100" min="0"/>
+      <label>Descripción / propuesta de valor</label>
+      <textarea id="description" placeholder="¿Qué problema resuelve? ¿Qué beneficios ofrece al lector?"></textarea>
+
+      <button class="btn" id="btn-ai">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        PREDECIR CON GROQ AI
+      </button>
+      <button class="btn btn-demo" id="btn-demo">▶ MODO DEMO (sin API Key)</button>
+
+      <div class="loader" id="loader"><div class="spinner"></div><span id="loader-txt">Conectando con Groq...</span></div>
+      <div class="err" id="err"></div>
+    </div>
+
+    <!-- CONTEXTO -->
+    <div class="card">
+      <div class="ctitle">📊 Contexto de Mercado</div>
+      <label>Competidores en el nicho</label>
+      <select id="competition">
+        <option value="1">Bajo (menos de 100)</option>
+        <option value="2" selected>Medio (100–500)</option>
+        <option value="3">Alto (más de 500)</option>
+      </select>
+      <label>Audiencia propia (email, redes sociales)</label>
+      <select id="audsize">
+        <option value="0">No tengo audiencia</option>
+        <option value="1">Pequeña (menos de 1,000)</option>
+        <option value="2">Media (1,000 – 10,000)</option>
+        <option value="3">Grande (más de 10,000)</option>
+      </select>
+      <label>Experiencia previa en ventas digitales</label>
+      <select id="experience">
+        <option value="0">Ninguna — primer producto</option>
+        <option value="1">Poca — 1-2 productos previos</option>
+        <option value="2">Moderada — 3-5 productos</option>
+        <option value="3">Alta — más de 5 productos</option>
+      </select>
+      <label>Estrategia de lanzamiento</label>
+      <select id="launch">
+        <option value="1">Solo orgánico (SEO, redes)</option>
+        <option value="2">Ads pagados (Facebook, Google)</option>
+        <option value="2">Afiliados / referidos</option>
+        <option value="2">Email marketing</option>
+        <option value="3">Combinación de varias</option>
+      </select>
+      <label>Horizonte de proyección</label>
+      <select id="horizon">
+        <option value="3">3 meses</option>
+        <option value="6" selected>6 meses</option>
+        <option value="12">12 meses</option>
+      </select>
+      <label>Notas adicionales (opcional)</label>
+      <textarea id="notes" placeholder="Tendencias del nicho, estacionalidad, idioma objetivo..."></textarea>
+      <div class="tip">
+        <strong>Proyecto realizado por:</strong>  <em>Daniel Isaac Londoño Giler</em> - <em>Aarón Galindo López</em> - <em>Jeimy Herlinda Ordoñez Contrera</em>
+      </div>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="card" id="results-card">
+      <div class="ctitle"><span class="dot"></span>Predicción<span class="mode-label" id="mode-label"></span></div>
+      <div class="metrics" id="metrics" style="display:none"></div>
+      <div class="chart-wrap" id="chart-wrap" style="display:none">
+        <canvas id="chart" height="200"></canvas>
+      </div>
+      <div class="ai-resp" id="ai-resp">Esperando análisis...</div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
