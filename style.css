@@ -2,7 +2,7 @@
 :root {
   --accent:#00ff37d2; 
   --accent2:#3ac9ed;
-  --bg:#cfcfcf; 
+  --bg:#534a6eb4; 
   --border:#1e1e2e; 
   --card:#48a7a2; 
   --danger:#ff4466;
@@ -18,7 +18,14 @@ html{
   scroll-behavior:smooth;
 }
 body{
-  background:var(--bg);
+  background: linear-gradient(to bottom, 
+              rgb(255, 255, 255) 0%, 
+              rgba(255, 255, 255, 0.5) 10%, 
+              rgba(0, 123, 255, 0.3) 25%,
+              rgba(0, 123, 255, 0.2) 30%,
+              rgba(0, 123, 255, 0.2) 40%,
+              rgba(0, 123, 255, 0.1) 50%,
+              #286af781 60%);
   color:var(--text);
   font-family:'DM Mono',monospace;
   min-height:100vh;
@@ -60,6 +67,7 @@ header{
   font-family:'Syne',sans-serif;
   font-size:1.35rem;
   font-weight:800;
+  text-shadow: 2px 2px 1px #5de285d7, 1px 1px 2px #755fee;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -179,6 +187,12 @@ header{
   line-height:1.05;
   margin-bottom:14px;
   text-shadow: 4px 3px 3px #63f78fd7, 1px 1px 2px #755fee, 1px 10px 5px #0000003a;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.banner h1 span{
+  background-clip:text;
+  text-shadow: 4px 3px 3px #8f5ceee5, 1px 1px 2px #63f78fd7, 1px 10px 5px #0000003a;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
