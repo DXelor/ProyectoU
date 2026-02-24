@@ -1,6 +1,6 @@
 
 :root {
-  --accent:#00ff88d2; 
+  --accent:#00ff37d2; 
   --accent2:#3ac9ed;
   --bg:#cfcfcf; 
   --border:#1e1e2e; 
@@ -125,7 +125,6 @@ header{
   margin-top:10px;
 }
 .model-row span{
-  font-size:.67rem;
   color:var(--muted);
 }
 .model-row select{
@@ -172,13 +171,14 @@ header{
   margin-bottom:44px;
 }
 .banner h1{
-  background: -webkit-linear-gradient(#63f78f, #755fee);
+  background: -webkit-linear-gradient(#003cff, #765dff);
   background-clip:text;
   font-family:'Syne',sans-serif;
   font-size:clamp(1.9rem,5vw,3.2rem);
   font-weight:800;
   line-height:1.05;
   margin-bottom:14px;
+  text-shadow: 4px 3px 3px #63f78fd7, 1px 1px 2px #755fee, 1px 10px 5px #0000003a;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
