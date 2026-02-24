@@ -18,7 +18,6 @@ html{
   scroll-behavior:smooth;
 }
 body{
-  background-color: #ffffff8e;
   color:var(--text);
   font-family:'DM Mono',monospace;
   min-height:100vh;
@@ -30,12 +29,14 @@ body::before{
   pointer-events:none;
   position:fixed;
   z-index:0;
-  background-image: url(graph.png);
-  background-size: cover;
-  background-position: bottom;
+  background-image: url(graph.gif);
+  background-size: 20%;
+  background-position: right top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.4;
+  background-attachment: scroll;
+  margin-top: 28vh;
+  margin-right: 19vw;
+  opacity: 1;
 }
 .wrap{
   margin:0 auto;
@@ -44,20 +45,6 @@ body::before{
   position:relative;
   z-index:1;
 }
-.img{
-  position: relative;
-  height: 100vh;
-}
-.img::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  
-   /* nivel de transparencia */
-  z-index: -1;
-
-}
-
 /* HEADER */
 /* Estilos de la seccion de HEADER */
 header{
