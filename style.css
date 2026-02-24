@@ -27,16 +27,6 @@ body::before{
   content:'';
   inset:0;
   pointer-events:none;
-  position:fixed;
-  z-index:0;
-  background-image: url(graph.gif);
-  background-size: 20%;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  margin-top: 28vh;
-  margin-right: 19vw;
-  opacity: 1;
 }
 .wrap{
   margin:0 auto;
@@ -173,6 +163,8 @@ header{
 /* Banner principal donde se encuentra el titulo y una pequeña descripcion de la herramienta */
 .banner{
   text-align:center;
+  position: relative;
+  z-index: 1;
   margin-bottom:44px;
 }
 .banner h1{
@@ -201,7 +193,37 @@ header{
   max-width:660px;
 }
 /*=============grafica=================*/
+#graphContainer{
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 40px;
+}
+#graph{
+  display: block;
+  margin-left: auto;
+  background-image: url(graph.gif);
+  background-repeat: round;
+  background-attachment: scroll;
+  background-size: cover;
+  min-width: 200px;
+  max-width: 260px;
+  min-height: 160px;
+  max-height: 230px;
+}
 
+@media(max-width:900px){
+    #graphContainer{
+      top: 30px;
+      left: 37%;
+      right: 63%;
+    }
+    #graph{
+      min-width: 200px;
+      min-height: 140px;
+    }
+  }
 
 /*============Fin Grafica============*/
 
