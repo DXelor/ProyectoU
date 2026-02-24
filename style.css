@@ -2,9 +2,9 @@
 :root {
   --accent:#00ff37d2; 
   --accent2:#3ac9ed;
-  --bg:#534a6eb4; 
+  --bg:#dac2eeb4; 
   --border:#1e1e2e; 
-  --card:#48a7a2; 
+  --card: linear-gradient(145deg, #426486c7, #467a8385);; 
   --danger:#ff4466;
   --muted:#3d3d4d; 
   --text:#000000; 
@@ -18,13 +18,17 @@ html{
   scroll-behavior:smooth;
 }
 body{
+  background:  radial-gradient(circle at 15% 80%, rgba(70, 110, 180, 0.15), transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(120, 150, 200, 0.12), transparent 45%),
+        linear-gradient(135deg, #eef2f7 0%, #dce3f0 50%, #f4f6fb 100%);
+  position: relative;
   color:var(--text);
   font-family:'DM Mono',monospace;
   min-height:100vh;
   overflow-x:hidden;
 }
 body::before{
-  content:'';
+  content: "";
   inset:0;
   pointer-events:none;
 }
@@ -198,18 +202,19 @@ header{
   position: absolute;
   z-index: -1;
   right: 0;
-  top: 40px;
+  top: 0;
 }
 #graph{
   display: block;
   margin-left: auto;
-  background-image: url(graph.gif);
+  background-image: url(graph.png);;
+  opacity: 0.5;
   background-repeat: round;
   background-attachment: scroll;
   background-size: cover;
-  min-width: 200px;
+  min-width: 300px;
   max-width: 260px;
-  min-height: 160px;
+  min-height: 260px;
   max-height: 230px;
 }
 
@@ -232,6 +237,7 @@ header{
   display:grid;
   position: relative;
   grid-template-columns:1fr 1fr;
+  z-index: 1;
   gap:22px;
   margin-bottom:22px;
 }
