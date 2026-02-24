@@ -201,32 +201,29 @@ header{
   display: block;
   position: absolute;
   z-index: -1;
-  right: 0;
+  right: -30px;
   top: 0;
 }
 #graph{
   display: block;
-  margin-left: auto;
+  margin-left: 2px;
   background-image: url(graph.png);;
-  opacity: 0.5;
+  opacity: 0.7;
   background-repeat: round;
   background-attachment: scroll;
   background-size: cover;
-  min-width: 300px;
+  min-width: 280px;
   max-width: 260px;
-  min-height: 260px;
+  min-height: 230px;
   max-height: 230px;
 }
 
-@media(max-width:900px){
+@media(max-width:1100px){
     #graphContainer{
-      top: 30px;
-      left: 37%;
-      right: 63%;
-    }
-    #graph{
-      min-width: 200px;
-      min-height: 140px;
+      display: flex;
+      vertical-align: center;
+      justify-content: center;
+      height: 100vh;
     }
   }
 
