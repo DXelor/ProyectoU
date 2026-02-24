@@ -145,10 +145,10 @@ header{
 /* DEMO BANNER */
 /* Estilos para el cuadro que sale bajo el header cuando se usa el Boton de MODO DEMO */
 .demo-banner{
-  background:rgba(124,58,237,.12);
-  border:1px solid rgba(124,58,237,.4);
+  background:rgba(43, 91, 194, 0.226);
+  border:1px solid rgba(58, 61, 237, 0.4);
   border-radius:6px;
-  color:#c4b5fd;
+  color:#8272c4;
   display:none;
   font-size:.78rem;
   line-height:1.7;
@@ -159,7 +159,7 @@ header{
   color:#a78bfa;
 }
 .demo-banner a{
-  color:var(--accent);
+  color:#0aa55d;
   text-decoration:none;
 }
 
@@ -258,8 +258,7 @@ header{
   padding:26px;
   position:relative;
   overflow:hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;  
 }
 
 .card::before{
@@ -279,6 +278,7 @@ header{
   letter-spacing:2px;
   margin-bottom:18px;
   text-transform:uppercase;
+  
 }
 
 /* FORM */
@@ -346,9 +346,10 @@ textarea{
   padding:13px;
   transition:all .2s;
   width:100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .btn:hover{
-  background:#00cc6e;
+  background:#0bc56e;
   transform:translateY(-1px);
 }
 .btn:disabled{
@@ -390,10 +391,10 @@ textarea{
   }
 }
 .err{
-  background:rgba(255,68,102,.1);
+  background:rgba(150, 4, 31, 0.267);
   border:1px solid rgba(255,68,102,.3);
   border-radius:4px;
-  color:#ff8899;
+  color:#c00303;
   display:none;
   font-size:.77rem;
   line-height:1.75;
@@ -516,7 +517,7 @@ textarea{
   color:#ffd700;
 }
 .tip{
-  background:rgba(114, 98, 86, 0.295);
+  background:rgba(122, 165, 158, 0.473);
   border:1px solid rgba(70, 147, 248, 0.301);
   border-radius:4px;
   color:var(--muted);
@@ -524,6 +525,7 @@ textarea{
   line-height:1.7;
   margin-top:16px;
   padding:11px 13px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .tip a{
   color:#4eaee6;
