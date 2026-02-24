@@ -2,12 +2,12 @@
 :root {
   --accent:#00ff37d2; 
   --accent2:#3ac9ed;
-  --bg:#dac2eeb4; 
+  --bg:#ffffffb4; 
   --border:#1e1e2e; 
-  --card: linear-gradient(145deg, #426486c7, #467a8385);; 
+  --card: linear-gradient(145deg, #8db3dac7, #79adb685);; 
   --danger:#ff4466;
-  --muted:#3d3d4d; 
-  --text:#000000; 
+  --muted:#464650; 
+  --text:#000000;
 }
 *{
   box-sizing:border-box;
@@ -172,20 +172,23 @@ header{
   margin-bottom:44px;
 }
 .banner h1{
-  background: -webkit-linear-gradient(#003cff, #765dff);
+  background: #2855CE;
+  background: -moz-linear-gradient(top, #2855CE 0%, #1C6EA4 47%, #17C5B6 100%);
+  background: -webkit-linear-gradient(top, #2855CE 0%, #1C6EA4 47%, #17C5B6 100%);
+  background: linear-gradient(to bottom, #2855CE 0%, #1C6EA4 47%, #17C5B6 100%);
   background-clip:text;
   font-family:'Syne',sans-serif;
   font-size:clamp(1.9rem,5vw,3.2rem);
   font-weight:800;
   line-height:1.05;
   margin-bottom:14px;
-  text-shadow: 4px 3px 3px #63f78fd7, 1px 1px 2px #755fee, 1px 10px 5px #0000003a;
+  text-shadow: 2px 1px 3px #639ef7, 1px 1px 2px #52d2db, 1px 7px 5px #0000003a;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .banner h1 span{
   background-clip:text;
-  text-shadow: 4px 3px 3px #8f5ceee5, 1px 1px 2px #63f78fd7, 1px 10px 5px #0000003a;
+  text-shadow: 2px 1px 3px #5ceeb1e5, 1px 1px 2px #63c8f7d7, 1px 7px 5px #0000003a;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -255,6 +258,8 @@ header{
   padding:26px;
   position:relative;
   overflow:hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .card::before{
