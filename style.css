@@ -18,27 +18,24 @@ html{
   scroll-behavior:smooth;
 }
 body{
-  background: linear-gradient(to bottom, 
-              rgb(255, 255, 255) 0%, 
-              rgba(255, 255, 255, 0.5) 10%, 
-              rgba(0, 123, 255, 0.3) 25%,
-              rgba(0, 123, 255, 0.2) 30%,
-              rgba(0, 123, 255, 0.2) 40%,
-              rgba(0, 123, 255, 0.1) 50%,
-              #286af781 60%);
+  background-color: #ffffff8e;
   color:var(--text);
   font-family:'DM Mono',monospace;
   min-height:100vh;
   overflow-x:hidden;
 }
 body::before{
-  background-image:linear-gradient(rgba(0,255,136,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.03) 1px,transparent 1px);
-  background-size:40px 40px;
   content:'';
   inset:0;
   pointer-events:none;
   position:fixed;
   z-index:0;
+  background-image: url(graph.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.4;
 }
 .wrap{
   margin:0 auto;
@@ -48,15 +45,17 @@ body::before{
   z-index:1;
 }
 .img{
-  margin: 0;
-  padding: 0;
+  position: relative;
+  height: 100vh;
+}
+.img::before{
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(graph.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
+  inset: 0;
+  
+   /* nivel de transparencia */
+  z-index: -1;
+
 }
 
 /* HEADER */
