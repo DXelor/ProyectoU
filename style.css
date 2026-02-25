@@ -434,6 +434,7 @@ textarea{
 }
 .mval{
   color:var(--accent);
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
   font-family:'Syne',sans-serif;
   font-size:1.5rem;
   font-weight:800;
@@ -452,6 +453,7 @@ textarea{
   border-radius:4px;
   margin-bottom:16px;
   padding:18px;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .ai-resp{
   background:var(--bg);
@@ -463,6 +465,7 @@ textarea{
   min-height:100px;
   padding:18px;
 }
+
 .tag{
   border-radius:2px;
   display:inline-block;
@@ -475,14 +478,17 @@ textarea{
 .th{
   background:rgba(0,255,136,.15);
   color:var(--accent);
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .tm{
   background:rgba(124,58,237,.2);
   color:#a78bfa;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .tl{
   background:rgba(255,68,102,.15);
   color:var(--danger);
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .dot{
   animation:pulse 2s ease-in-out infinite;
@@ -533,9 +539,11 @@ textarea{
 }
 .tip strong{
   color:var(--accent);
+  font-size: 1.2em;
 }
 .tip em{
   color: var(--text);
+  font-size: 1.2em;
 }
 
 ::-webkit-scrollbar{

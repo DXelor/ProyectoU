@@ -151,7 +151,7 @@ function renderResults(r,horizon,isAI,modelUsed){
     ml.textContent=`⚡ GROQ — ${sn.toUpperCase()}`;
   } else {
     ml.className='mode-label mode-demo';
-    ml.textContent='⚡ DEMO';
+    ml.textContent='📊';
   }
   $('demo-banner').style.display=isAI?'none':'block';
 
@@ -175,10 +175,10 @@ function renderResults(r,horizon,isAI,modelUsed){
     type:'bar',
     data:{labels,datasets:[
       {label:'Ventas (uds)',data:ventas,
-       backgroundColor:'rgba(0,255,136,.18)',borderColor:'#00ff88',
+       backgroundColor:'rgba(14, 131, 146, 0.31)',borderColor:'#2162c4',
        borderWidth:2,borderRadius:3,yAxisID:'y'},
-      {label:'Ingresos (USD)',data:ingresos,type:'line',borderColor:'#fb923c',
-       backgroundColor:'rgba(249,115,22,.07)',borderWidth:2.5,pointBackgroundColor:'#fb923c',
+      {label:'Ingresos (USD)',data:ingresos,type:'line',borderColor:'#fb983c',
+       backgroundColor:'rgba(191, 117, 241, 0.24)',borderWidth:2.5,pointBackgroundColor:'#fbee3c',
        pointRadius:4,tension:.4,fill:true,yAxisID:'y2'}
     ]},
     options:{
@@ -198,11 +198,11 @@ function renderResults(r,horizon,isAI,modelUsed){
 <div style="color:#fb923c;font-size:.69rem;letter-spacing:1px;margin-bottom:13px;opacity:.8">
   RIESGO: <span class="tag ${rt}">${(r.riesgo||'').toUpperCase()}</span>
   POTENCIAL: <span class="tag ${pt}">${(r.potencial||'').toUpperCase()}</span>
-  MES PICO: <span style="color:#fff">Mes ${r.mes_pico||'-'}</span>
+  MES PICO: <span style="color:rgb(230, 171, 9)">Mes ${r.mes_pico||'-'}</span>
 </div>
 <div style="margin-bottom:17px;line-height:2">${(r.analisis||'').replace(/\n/g,'<br/>')}</div>
-<div style="color:#fb923c;font-size:.69rem;letter-spacing:1px;margin-bottom:9px">▶ RECOMENDACIONES ESTRATÉGICAS</div>
-<div style="line-height:2.2;color:#c4c4d4">${recoms}</div>`;
+<div id="recomendations" style="color:#fb923c;font-size:.69rem;letter-spacing:1px;margin-bottom:9px">▶ RECOMENDACIONES ESTRATÉGICAS</div>
+<div style="line-height:2.2;color:#4141ee">${recoms}</div>`;
 
   $('results-card').scrollIntoView({behavior:'smooth',block:'start'});
 }
