@@ -37,8 +37,8 @@ async function runGroq(){
   hideErr();
   const apiKey = gv('apikey');
   if(!apiKey){
-    showErr('Pega tu API Key de Groq arriba o usa el <strong>Modo Demo</strong>. Gratis en
-       <a href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a>');
+    showErr(`Pega tu API Key de Groq arriba o usa el <strong>Modo Demo</strong>. Gratis en
+       <a href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a>`);
     return;
   }
   const d = collectInputs();

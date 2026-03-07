@@ -12,13 +12,13 @@ Market Sense AI es una herramienda de analisis predictivo  de ventas para produc
 
 # Caracteristicas
 
-📊 Proyeccion mensuas de ventas e ingresos de (3, 6, 12) meses.
-🤖 Analisis generado por IA con 3 parrafos contextuales.
-💡 4 recomendaciones personalizadas por producto
-⚠️ Clasificacion de riesgo y potencial (Alto / Medio / Bajo)
-📈 Grafico interactivo
-🔁 MODO DEMO en caso de que no se tenga acceso a una API Key o tenga problemas de coneccion con la API
-🎨 Interfaz clara y responsiva con una imagen estatica
+-📊 Proyeccion mensuas de ventas e ingresos de (3, 6, 12) meses.
+-🤖 Analisis generado por IA con 3 parrafos contextuales.
+-💡 4 recomendaciones personalizadas por producto
+-⚠️ Clasificacion de riesgo y potencial (Alto / Medio / Bajo)
+-📈 Grafico interactivo
+-🔁 MODO DEMO en caso de que no se tenga acceso a una API Key o tenga problemas de coneccion con la API
+-🎨 Interfaz clara y responsiva con una imagen estatica
 
 # Como usar la app web Localmente
 
